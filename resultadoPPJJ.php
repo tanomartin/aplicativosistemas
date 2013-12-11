@@ -57,7 +57,7 @@ for($i = 0; $i < count($filas); $i++) {
   </tr>
 </table>
 <?php
-$archivo2 = preg_replace('/txt/','/bak/',$archivo);
+$archivo2 = preg_replace('/txt/','bak',$archivo);
 rename($archivo, $archivo2);
 $ext2 = '/.txt/';
 $ext3 = '/.bak/';
