@@ -26,7 +26,7 @@ $host = "localhost";
 $user = "ospimrem_legacy";
 $pass = "trozo299tabea";
 $db = mysql_connect($host,$user,$pass);
-mysql_select_db('ospimrem_aplicativo');
+mysql_select_db('ospimrem_newaplicativo');
 //////////////// DDJJ
 $sqlValidas = "SELECT * FROM validas WHERE fecsub = '$fecsub'";
 $resValidas = mysql_query($sqlValidas,$db);
@@ -43,7 +43,7 @@ while($rowValidas=mysql_fetch_array($resValidas)) {
 	$nrcuil = $rowValidas['nrcuil'];
 	$permes = $rowValidas['permes'];
 	$perano = $rowValidas['perano'];
-	$sqlBorraDDJJVali = "DELETE FROM ddjj WHERE id = '$id' AND nrcuit = '$nrcuit' AND nrcuil = '$nrcuil' AND nrctrl = '$nrctrl' AND permes = '$permes' AND perano = '$perano'";
+	$sqlBorraDDJJVali = "DELETE FROM ddjjcondocu WHERE id = '$id' AND nrcuit = '$nrcuit' AND nrcuil = '$nrcuil' AND nrctrl = '$nrctrl' AND permes = '$permes' AND perano = '$perano'";
 	$resBorraDDJJVali = mysql_query($sqlBorraDDJJVali,$db);
 	if($resBorraDDJJVali) {
 		//echo $id." ".$nrcuit." ".$nrctrl." ok! <br>";
@@ -69,7 +69,7 @@ while($rowPPJJ=mysql_fetch_array($resPPJJ)) {
 	$nrcuil = $rowPPJJ['nrcuil'];
 	$permes = $rowPPJJ['permes'];
 	$perano = $rowPPJJ['perano'];
-	$sqlBorraDDJJPpjj = "DELETE FROM ddjj WHERE id = '$id' AND nrcuit = '$nrcuit' AND nrcuil = '$nrcuil' AND nrctrl = '$nrctrl'  AND permes = '$permes' AND perano = '$perano'";
+	$sqlBorraDDJJPpjj = "DELETE FROM ddjjcondocu WHERE id = '$id' AND nrcuit = '$nrcuit' AND nrcuil = '$nrcuil' AND nrctrl = '$nrctrl'  AND permes = '$permes' AND perano = '$perano'";
 	$resBorraDDJJPpjj = mysql_query($sqlBorraDDJJPpjj,$db);
 	if($resBorraDDJJPpjj) {
 		//echo $id." ".$nrcuit." ".$nrctrl." ok ppjj!!! <br>";
