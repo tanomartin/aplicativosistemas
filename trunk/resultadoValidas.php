@@ -24,7 +24,7 @@ $user = "ospimrem_legacy";
 $pass = "trozo299tabea";
 //Ejecucion de la sentencia SQL
 $db = mysql_connect($host,$user,$pass) or die ('Problemas de Conexion con la BD');
-mysql_select_db('ospimrem_aplicativo');
+mysql_select_db('ospimrem_newaplicativo');
 $archivo = 'validas'.$ano.$mes.$dia.'.txt';
 echo $archivo."<br>";
 $filas = file($archivo);
@@ -33,7 +33,7 @@ $ok = 0;
 $mal = 0;
 for($i = 0; $i < count($filas); $i++) {
 	$datos = explode ('|', $filas[$i]);
-	$sql = "INSERT INTO validas VALUES ('".trim($datos[0])."','".trim($datos[1])."','".trim($datos[2])."','".trim($datos[3])."','".trim($datos[4])."','".trim($datos[5])."','".trim($datos[6])."','".trim($datos[7])."','".trim($datos[8])."','".trim($datos[9])."','".trim($datos[10])."','".trim($datos[11])."','".trim($datos[12])."','".trim($datos[13])."','".trim($datos[14])."','".trim($datos[15])."','".trim($datos[16])."')";
+	$sql = "INSERT INTO validas VALUES ('".trim($datos[0])."','".trim($datos[1])."','".trim($datos[2])."','".trim($datos[3])."','".trim($datos[4])."','".trim($datos[5])."','".trim($datos[6])."','".trim($datos[7])."','".trim($datos[8])."','".trim($datos[9])."','".trim($datos[10])."','".trim($datos[11])."','".trim($datos[12])."','".trim($datos[13])."','".trim($datos[14])."','".trim($datos[15])."','".trim($datos[16])."','".trim($datos[17])."')";
 	$query = mysql_query($sql, $db);
 	if($query) {
 		$ok = $ok + 1;

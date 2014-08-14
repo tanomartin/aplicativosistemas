@@ -24,7 +24,7 @@ $user = "ospimrem_legacy";
 $pass = "trozo299tabea";
 //Ejecucion de la sentencia SQL
 $db = mysql_connect($host,$user,$pass) or die ('Problemas de Conexion con la BD');
-mysql_select_db('ospimrem_aplicativo');
+mysql_select_db('ospimrem_newaplicativo');
 $archivo = 'ppjj'.$ano.$mes.$dia.'.txt';
 echo $archivo."<br>";
 $filas = file($archivo);
