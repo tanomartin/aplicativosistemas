@@ -1,0 +1,1 @@
+Subida de información para el cierre de recaudación.
